@@ -1,0 +1,10 @@
+const express = require("express");
+const app = express();
+const router = express.Router();
+const userRouter = require("./user");
+const grouprouter = require("./group");
+const expenserouter = require("./expense");
+router.use("/user", userRouter);
+router.use("/group", grouprouter);
+router.use("/expense", expenserouter);
+module.exports = router;
