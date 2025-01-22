@@ -16,7 +16,7 @@ export function AddExpense() {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/v1/user/groupusers?id=${groupId}`,
+          `https://split-5spa.onrender.com/api/v1/user/groupusers?id=${groupId}`,
           {
             headers: {
               authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -59,7 +59,7 @@ export function AddExpense() {
   const addExpense = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/v1/expense/add?id=${groupId}`,
+        `https://split-5spa.onrender.com/api/v1/expense/add?id=${groupId}`,
         {
           desc,
           amount,

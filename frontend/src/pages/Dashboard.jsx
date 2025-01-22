@@ -14,7 +14,7 @@ const Dashboard = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/v1/group/list?filter=${filter}`,
+        `https://split-5spa.onrender.com/api/v1/group/list?filter=${filter}`,
         {
           headers: {
             authorization: `Bearer ${localStorage.getItem("token")}`,

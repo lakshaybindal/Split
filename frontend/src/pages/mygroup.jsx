@@ -13,7 +13,7 @@ export default function MyGroup() {
 
   const getSplits = async () => {
     const response = await axios.get(
-      `http://localhost:3000/api/v1/expense/splits?id=${groupId}`,
+      `https://split-5spa.onrender.com/api/v1/expense/splits?id=${groupId}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -25,7 +25,7 @@ export default function MyGroup() {
 
   const getMyGroup = async () => {
     const response = await axios.get(
-      `http://localhost:3000/api/v1/group/mygroup?id=${groupId}`,
+      `https://split-5spa.onrender.com/api/v1/group/mygroup?id=${groupId}`,
       {
         headers: {
           authorization: `Bearer ${localStorage.getItem("token")}`,

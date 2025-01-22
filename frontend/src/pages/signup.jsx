@@ -16,7 +16,7 @@ export function Signup() {
   const handleSignup = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/user/signup",
+        "https://split-5spa.onrender.com/api/v1/user/signup",
         {
           username,
           fName: firstName,

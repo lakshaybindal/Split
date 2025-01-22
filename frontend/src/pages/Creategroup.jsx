@@ -24,7 +24,7 @@ export default function CreateGroup() {
   };
   const createGroup = async () => {
     const response = await axios.post(
-      "http://localhost:3000/api/v1/group/create",
+      "https://split-5spa.onrender.com/api/v1/group/create",
       {
         name: name,
         members: members.map((member) => ({
@@ -47,7 +47,7 @@ export default function CreateGroup() {
   const fetchUsers = async (filter = "") => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/v1/user/list?filter=${filter}`,
+        `https://split-5spa.onrender.com/api/v1/user/list?filter=${filter}`,
         {
           headers: {
             authorization: `Bearer ${localStorage.getItem("token")}`, // Replace "token" with your actual key
